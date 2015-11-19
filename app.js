@@ -4,14 +4,14 @@ var express = require('express'),
     cors = require('cors');
 
 var corsOptions = {
-  origin: 'http://localhost:8080',
+  origin: 'http://manav:8080',
   credentials: true
 };
 
 app.use(cors(corsOptions));
 
 var InMemPouchDB = PouchDB.defaults({db: require('memdown')});
-app.use('/testdb', require('express-pouchdb')(InMemPouchDB, {
+app.use('/couchdb', require('express-pouchdb')(InMemPouchDB, {
   mode: 'fullCouchDB'
 }));
 
