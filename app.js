@@ -1,13 +1,17 @@
 var express = require('express'),
     app     = express(),
     PouchDB = require('pouchdb'),
-    cors = require('cors');
+    cors = require('cors'),
+    morgan = require('morgan');
 
 var corsOptions = {
-  origin: 'http://manav:8080',
+  origin: 'http://manav:5000',
   credentials: true
 };
 
+
+var app = express();
+app.use(morgan('tiny'));
 app.use(cors(corsOptions));
 
 var InMemPouchDB = PouchDB.defaults({db: require('memdown')});
