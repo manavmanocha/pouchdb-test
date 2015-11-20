@@ -8,6 +8,7 @@
     "cors": "^2.7.1",
     "express": "^4.13.3",
     "express-pouchdb": "git://github.com/manavmanocha/express-pouchdb",
+    "memdown": "^1.1.0",
     "morgan": "^1.6.1",
     "pouchdb": "^5.1.0"
   },

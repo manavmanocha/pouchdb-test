@@ -36,7 +36,8 @@ app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x
 app.use(requestLogger);
 app.use(cors(corsOptions));
 
-app.use('/couchdb', require('express-pouchdb')(PouchDB, {
+var InMemPouchDB = PouchDB.defaults({db: require('memdown')});
+app.use('/couchdb', require('express-pouchdb')(InMemPouchDB, {
   mode: 'fullCouchDB'
 }));
 
