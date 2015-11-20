@@ -14,7 +14,7 @@ var requestLogger = function (req, res, next){
 }
 
 var corsOptions = {
-  origin: 'http://manav:5000',
+  origin: true,
   credentials: true
 };
 
