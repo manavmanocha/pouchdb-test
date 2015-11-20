@@ -3,3 +3,13 @@ node_modules
 
 #Bower installation directory
 bower_components/
+
+#Leveldown DB directories
+pouch__auth_sessions__
+pouch__all_dbs__
+_replicator
+_users
+testdb
+
+log.txt
+config.json

@@ -14,8 +14,7 @@ var app = express();
 app.use(morgan('tiny'));
 app.use(cors(corsOptions));
 
-var InMemPouchDB = PouchDB.defaults({db: require('memdown')});
-app.use('/couchdb', require('express-pouchdb')(InMemPouchDB, {
+app.use('/couchdb', require('express-pouchdb')(PouchDB, {
   mode: 'fullCouchDB'
 }));
 
